@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.UpdateBookActivity"
+    android:scrollbars="none"
+    android:background="#353535"
+    app:layoutManager="LinearLayoutManager">
+
+
+    <RelativeLayout
+        android:layout_width="600dp"
+        android:layout_height="150dp"
+        android:background="@drawable/bg_image"
+        android:layout_marginTop="-50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/bg_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha=".3"
+            android:scaleType="centerCrop" />
+    </RelativeLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="79dp"
+        android:layout_height="113dp"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:id="@+id/book_img_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            android:scaleType="centerCrop"
+            app:srcCompat="@mipmap/ic_launcher"
+            tools:srcCompat="@tools:sample/avatars" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+
+        android:id="@+id/title_input2"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textFontWeight="700"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:text="Book Title"
+        app:layout_constraintStart_toEndOf="@+id/cardview"
+        app:layout_constraintTop_toTopOf="@+id/cardview" />
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/author_input2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#353535"
+        android:textStyle="italic"
+        android:text="Book Author"
+        android:inputType="textPersonName"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="@+id/title_input2"
+        app:layout_constraintTop_toBottomOf="@+id/title_input2" />
+
+    <TextView
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:id="@+id/synopsis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textFontWeight="700"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:ems="10"
+        android:text="Synopsis"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardview" />
+    <TextView
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:id="@+id/description_input2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:text="Description"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/synopsis" />
+
+    <TextView
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:textColor="@color/white"
+        android:id="@+id/img_input2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:ems="10"
+        android:text="Image url"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:textColor="@color/white"
+        android:id="@+id/mongo_id_input2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:ems="10"
+        android:text="Image url"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/bookMark_input2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="20"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/bookMark"
+        app:layout_constraintTop_toTopOf="@+id/bookMark" />
+    <TextView
+        android:id="@+id/slash_element"
+        android:layout_marginTop="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" / "
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/bookMark_input2"
+        app:layout_constraintTop_toTopOf="@+id/bookMark" />
+    <TextView
+        android:id="@+id/pages_input2"
+        android:layout_marginTop="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of pages"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/slash_element"
+        app:layout_constraintTop_toTopOf="@+id/bookMark" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/scan_note_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_margin="16dp"
+        android:backgroundTint="#e3fd35"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/camera" />
+
+    <io.apptik.widget.MultiSlider
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/range_slider5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:drawThumbsApart="true"
+        app:layout_constraintTop_toBottomOf="@+id/bookMark"
+        app:stepsThumbsApart="10"
+        app:thumbNumber="2"
+        app:rangeColor="#e3fd35"
+        app:thumbColor="#e3fd35"
+        tools:layout_editor_absoluteX="30dp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:id="@+id/noteRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/notes"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="2dp" />
+
+    <TextView
+        android:paddingLeft="30dp"
+        android:paddingRight="10dp"
+        android:id="@+id/bookMark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textFontWeight="700"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:text="BookMark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description_input2" />
+
+    <TextView
+        android:id="@+id/notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingRight="10dp"
+        android:text="NOTES"
+        android:textColor="@color/white"
+        android:textFontWeight="700"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/range_slider5" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

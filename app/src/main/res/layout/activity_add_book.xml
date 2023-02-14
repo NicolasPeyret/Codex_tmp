@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#353535"
+    tools:context=".activity.AddBookActivity"
+    android:padding="30dp">
+
+    <TextView
+        android:id="@+id/scan_explanation"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        tools:ignore="MissingConstraints"
+        android:text="In order to add a book please press the camera icon, point the scanner to a barcode and check the information that is automatically entered in the fields. Finally, click on add."/>
+    <EditText
+        android:backgroundTint="@color/white"
+        android:id="@+id/title_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Book Title"
+        android:textColor="@color/white"
+        android:textColorHint="#757575"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintTop_toBottomOf="@+id/scan_explanation"/>
+
+    <EditText
+        android:backgroundTint="@color/white"
+        android:id="@+id/isbn_input"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="ISBN"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description_input" />
+
+    <EditText
+        android:backgroundTint="@color/white"
+        android:id="@+id/author_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Book Author"
+        android:textColor="@color/white"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_input" />
+
+    <EditText
+        android:backgroundTint="@color/white"
+        android:id="@+id/description_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Description"
+        android:textColor="@color/white"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/author_input" />
+
+    <EditText
+        android:backgroundTint="@color/white"
+        android:id="@+id/img_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:ems="10"
+        android:hint="Image url"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description_input" />
+
+    <EditText
+        android:backgroundTint="@color/white"
+        android:id="@+id/pages_input"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Number of pages"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_input" />
+n
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="40dp"
+        android:text="Add a book"
+        android:backgroundTint="#e3fd35"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pages_input" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/scanButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:backgroundTint="#e3fd35"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/camera" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.project.codex">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission  
+    android:name="android.permission.FLASHLIGHT"  
+    android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"  
+    android:protectionLevel="normal" />     <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/Theme.Codex">
+        <activity android:name=".activity.UpdateBookActivity"
+            android:label="My Book"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activity.MainActivity"/>
+        <activity android:name=".activity.UpdateNoteActivity"
+            android:label="My Note"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activity.UpdateNoteActivity"/>
+        <activity
+            android:name=".activity.AddBookActivity"
+            android:label="Add a book to your library"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.ScannerActivity"
+            android:label="Scan a BarCode"
+            android:parentActivityName=".activity.AddBookActivity" />
+        <activity
+            android:name=".activity.ScannerML"
+            android:label="Scan a Codex Note"
+            android:parentActivityName=".activity.UpdateBookActivity" />
+        <activity
+            android:name=".activity.AddNoteActivity"
+            android:label="Add a note to a book"
+            android:parentActivityName=".activity.UpdateBookActivity" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="Codex"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="Login"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".activity.CustomCameraActivity"
+            android:label="Camera"
+            android:parentActivityName=".activity.UpdateBookActivity" >
+        android:exported="true">
+        </activity>
+        <activity
+            android:name=".activity.SignupActivity"
+            android:label="Signup"
+            android:exported="true"
+            android:parentActivityName=".activity.LoginActivity" >
+        </activity>
+        <activity android:name=".activity.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

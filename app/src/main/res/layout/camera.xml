@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/black"
+    android:background="@color/black">
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_back_arrow"
+        android:stateListAnimator="@null"
+        android:backgroundTint="@color/transparent"
+        >
+    </Button>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/empreintelito"
+        android:textColor="@android:color/black"
+        android:translationY="-100dp" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/captureImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#e3fd35"
+        android:clickable="true"
+        android:src="@drawable/camera" />
+
+
+</RelativeLayout>

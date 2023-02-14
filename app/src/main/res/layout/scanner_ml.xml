@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#353535"
+    tools:context=".activity.ScannerML">
+
+    <Button
+        android:id="@+id/validation"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/classified"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="#e3fd35"
+        android:text="Validate"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#e3fd35"
+        android:clickable="true"
+        android:src="@drawable/camera" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imageViewCard"
+        android:layout_width="300sp"
+        android:layout_height="300sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10sp"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="15dp"
+        android:backgroundTint="#353535">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/classified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewCard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10sp"
+        android:text="Classified as          "
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/classified"
+        android:layout_marginStart="-25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="-3dp"
+        android:layout_toEndOf="@+id/classified"
+        android:background="@drawable/rounded_textview"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+
+</RelativeLayout>

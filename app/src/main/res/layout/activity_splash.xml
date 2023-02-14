@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.SplashActivity"
+    android:background="#353535">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/logotype"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="100dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/slash_logotype" />
+
+        <TextView
+            android:id="@+id/developped"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="28dp"
+            android:text="version  1 . 0 . 0"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/logoName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logotype"
+            android:paddingTop="5dp"
+            android:text="Codex"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="32dp" />
+
+</RelativeLayout>
